@@ -1,0 +1,15 @@
+.our-featured-product .counter{
+    height: 65px;
+    width: 240px;
+    padding: 0 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid white;
+    font-size: 1.5rem;
+}
+
+.counter .counter-minus, .counter-plus{
+    cursor: pointer;
+}
