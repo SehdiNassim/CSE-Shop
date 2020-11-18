@@ -15,7 +15,7 @@ const FeaturedProduct = () => {
             </div>
             <div className='row justify-content-center'>
                 <div className='col-10 col-lg-6 d-flex justify-content-center'>
-                    <img src='img/CSE.png' alt='featured-product' style={{ height: '100%' }} />
+                    <img src='img/CSE.png' alt='featured-product' style={{ height: '100%', maxWidth: '100%' }} />
                 </div>
                 <div className='col-10 col-lg-6 d-flex flex-column justify-content-start'>
                     <p style={{ margin: '0' }}>CSE Look</p>

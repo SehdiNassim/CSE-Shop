@@ -20,7 +20,9 @@ body {
     background-color: #383D59;
     overflow-x: hidden;
 }
-
+.root{
+    overflow-x: hidden;
+}
 * {
     color: #fff;
     letter-spacing: 0px;
