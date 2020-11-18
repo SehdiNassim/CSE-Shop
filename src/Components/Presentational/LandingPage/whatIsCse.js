@@ -13,7 +13,7 @@ const WhatIsCse = () => {
                     <p className='title' style={{ textAlign: "center", textAlignLast: "center" }}>What is CSE ?</p>
                 </div>
                 <div className='col-12 col-md-6 col-lg-4'>
-                    <img src='/img/CSE.png' />
+                    <img src='/img/CSE.png' alt='cse-logo'/>
                 </div>
                 <div className='w-100'></div>
                 <div className='col-10 col-md-8 mt-4 mb-4'>

@@ -20,7 +20,9 @@ body {
     background-color: #383D59;
     overflow-x: hidden;
 }
-
+.root{
+    overflow-x: hidden;
+}
 * {
     color: #fff;
     letter-spacing: 0px;
@@ -29,6 +31,8 @@ body {
 .title {
     font-family: "GilroyExtraBold";
     font-size: 3rem;
+    text-align: center;
+    text-align-last: center;
 }
 
 .secondary-title {
