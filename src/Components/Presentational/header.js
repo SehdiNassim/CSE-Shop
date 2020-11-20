@@ -1,9 +1,12 @@
 import React from 'react'
+import { withRouter } from 'react-router'
+import { Link } from 'react-router-dom'
 import './header.css'
 
 
 const Header = ({
     onShopClick = f => f,
+    match
 }) => {
     return <header>
         <div className='header-bg'></div>
@@ -14,9 +17,18 @@ const Header = ({
                 <div className='burger'></div>
             </div>
             <div className='d-flex'>
-                <div className='nav-btn category-logo'>
-                    <img src='img/category.svg' alt='category' />
-                </div>
+                {
+                    match.path !== '/products'
+                        ? <Link to='/products'>
+                            <div className='nav-btn category-logo'>
+                                <img src='img/category.svg' alt='category' />
+                            </div>
+                        </Link>
+                        :
+                        <div className='nav-btn category-logo'>
+                            <img src='img/category.svg' alt='category' />
+                        </div>
+                }
                 <div className='nav-btn' onClick={e => {
                     onShopClick()
                 }}>
@@ -27,4 +39,4 @@ const Header = ({
     </header>
 }
 
-export default Header
+export default withRouter(Header)
