@@ -1,15 +1,14 @@
 import React from 'react'
-import Page from './pageTemplate';
 import Hero from './../Components/Presentational/LandingPage/hero';
 import LatestProduct from './../Components/Presentational/LandingPage/latestProduct';
 import FeaturedProduct from './../Components/Presentational/LandingPage/featuredProduct';
 
 const LandingPage = () => {
-    return <Page>
+    return <div>
         <Hero></Hero>
         <LatestProduct></LatestProduct>
         <FeaturedProduct></FeaturedProduct>
-    </Page>
+    </div>
 }
 
 export default LandingPage

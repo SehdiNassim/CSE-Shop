@@ -1,11 +1,10 @@
 import React from 'react'
-import Page from './pageTemplate';
 
 
 const AllProducts=()=>{
-    return <Page>
+    return <div>
 
-    </Page>
+    </div>
 }
 
 export default AllProducts

@@ -1,12 +1,12 @@
 import React from 'react'
 import { withRouter } from 'react-router'
-import { Link } from 'react-router-dom'
 import './header.css'
+import ConditionalLink from './conditionalLink';
 
 
 const Header = ({
     onShopClick = f => f,
-    match
+    location
 }) => {
     return <header>
         <div className='header-bg'></div>
@@ -17,18 +17,11 @@ const Header = ({
                 <div className='burger'></div>
             </div>
             <div className='d-flex'>
-                {
-                    match.path !== '/products'
-                        ? <Link to='/products'>
-                            <div className='nav-btn category-logo'>
-                                <img src='img/category.svg' alt='category' />
-                            </div>
-                        </Link>
-                        :
-                        <div className='nav-btn category-logo'>
-                            <img src='img/category.svg' alt='category' />
-                        </div>
-                }
+                <ConditionalLink to='/products' condition={location.pathname !== '/products'}>
+                    <div className='nav-btn category-logo'>
+                        <img src='img/category.svg' alt='category' />
+                    </div>
+                </ConditionalLink>
                 <div className='nav-btn' onClick={e => {
                     onShopClick()
                 }}>
