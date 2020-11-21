@@ -5,12 +5,11 @@ button {
     text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 1.125rem;
-    /* padding: 10% 10%; */
     color: #fff;
+    font-family: "GilroyExtraBold";
     border: none;
     font-weight: bold;
     background-color: #383D59;
-    /* background-color: transparent; */
     cursor: pointer;
     position: relative;
     overflow: hidden;

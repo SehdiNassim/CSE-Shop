@@ -1,75 +1,99 @@
-header{
+header {
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100vw;
     padding: 24px 0;
     z-index: 999;
+}
+.header-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
     background-image: linear-gradient(to right, rgba(96, 101, 128, 1) 0%, rgba(59, 63, 92, 1) 100%);
     background-image: -moz-linear-gradient(to right, rgba(96, 101, 128, 1) 0%, rgba(59, 63, 92, 1) 100%);
     background-image: -webkit-linear-gradient(to right, rgba(96, 101, 128, 1) 0%, rgba(59, 63, 92, 1) 100%);
     background-image: -o-linear-gradient(to right, rgba(96, 101, 128, 1) 0%, rgba(59, 63, 92, 1) 100%);
 }
-header nav{
+header nav {
     width: 100vw;
-    padding: 0 100px;
+    padding: 4px 100px;
 }
-header .cse-img{
+
+header .cse-logo, header .cse-logo-mobile {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
-    -webkit-transform: translate(-50%,-50%);
-    -moz-transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-    -o-transform: translate(-50%,-50%);
+    height: 52px;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
 }
-.nav-btn{
+
+header .cse-logo-mobile {
+    display: none;
+}
+
+.nav-btn {
     position: relative;
-    height: 32px;
-    width: 32px;
+    height: 24px;
+    width: 24px;
     margin: 0 12px;
     cursor: pointer;
 }
-.nav-btn > img{
+
+.nav-btn>img {
     height: 100%;
     width: 100%;
 }
-.burger{
+
+.burger {
     position: absolute;
     top: 50%;
     left: 0;
     height: 3px;
-    width: 32px;
+    width: 24px;
     background-color: white;
 }
-.burger::before{
+
+.burger::before {
     content: '';
     position: absolute;
     top: -8px;
     left: 0;
     height: 3px;
-    width: 32px;
+    width: 24px;
     background-color: white;
 }
-.burger::after{
+
+.burger::after {
     content: '';
     position: absolute;
     top: 8px;
     left: 0;
     height: 3px;
-    width: 32px;
+    width: 24px;
     background-color: white;
 }
 
-@media only screen and (max-width: 767px){
-    header nav{
-        padding: 0 32px;
+@media only screen and (max-width: 767px) {
+    header nav {
+        padding: 0 48px;
     }
-    .nav-btn{
+    header .cse-logo-mobile {
+        display: inline;
+    }
+    header .cse-logo {
+        display: none;
+    }
+    .category-logo {
+        display: none;
+    }
+    .nav-btn {
         margin: 0 8px;
-    }
-}
-@media only screen and (max-width: 400px){
-    header nav{
-        padding: 0 8px;
     }
 }

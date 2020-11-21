@@ -1,12 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
-import LandingPage from './Pages/landingPage';
+import { Provider } from 'react-redux';
+import CseShopStore from './Store/store';
+import App from './App';
 
+const store = CseShopStore()
 ReactDOM.render(
-  <React.StrictMode>
-    <LandingPage />
-  </React.StrictMode>,
+  <Provider store={store}>
+    <React.StrictMode>
+      <App/>
+    </React.StrictMode>
+  </Provider>,
   document.getElementById('root')
 );
 
