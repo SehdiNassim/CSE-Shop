@@ -6,7 +6,8 @@ import ConditionalLink from './conditionalLink';
 
 const Header = ({
     onShopClick = f => f,
-    location
+    location,
+    cartLength
 }) => {
     return <header>
         <div className='header-bg'></div>
@@ -26,6 +27,7 @@ const Header = ({
                     onShopClick()
                 }}>
                     <img src='img/shopping-bag.svg' alt='cart' />
+                    <span className='cart-length' style={{display:cartLength ? '' : 'none'}}>{cartLength}</span>
                 </div>
             </div>
         </nav>

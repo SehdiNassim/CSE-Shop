@@ -1,0 +1,45 @@
+.cart-item {
+    border-bottom: 1px white solid;
+    padding: 24px;
+}
+.cart-item-img {
+    width: 150px;
+}
+
+.cart-item-title {
+    font-size: 1.1rem;
+    font-family: "GilroyExtraBold";
+}
+.cart-item-category {
+    font-size: .9em;
+}
+.cart-item-price{
+    font-size: 1.1rem;
+}
+
+.remove-item{
+    font-size: .9rem;
+    border-bottom: 1px solid white;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.cart-item-category, .cart-item-price, .remove-item{
+    margin-top:-12px;
+}
+@media only screen and (max-width:768px){
+}
+@media only screen and (max-width:500px) {
+    .cart-item{
+        padding: 12px 0;
+    }
+    .cart-item-img {
+        width: 100px;
+    }
+    .cart-item-title, .cart-item-price {
+        font-size: .7rem;
+    }
+    .cart-item-category , .remove-item{
+        font-size: .4rem;
+    }
+}

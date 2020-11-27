@@ -13,7 +13,12 @@
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
+    transition: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
 }
 
 body {
@@ -26,11 +31,12 @@ body {
 * {
     color: #fff;
     letter-spacing: 0px;
+    scroll-behavior: auto;
 }
 
 .title {
     font-family: "GilroyExtraBold";
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: center;
     text-align-last: center;
 }
@@ -61,4 +67,26 @@ p {
 section {
     padding-bottom: 3rem !important;
     padding-top: 3rem !important;
+}
+
+.cart-length{
+    position: absolute;
+    top: 2px;
+    right: -4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background-color: black;
+    font-size: .4rem;
+    text-align: center;
+}
+
+@media only screen and (max-width:768px){
+    .title{
+        font-size: 2rem;
+    }
 }
