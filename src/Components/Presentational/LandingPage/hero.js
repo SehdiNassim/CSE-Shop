@@ -20,7 +20,7 @@ const Hero=()=>{
                 </div>
                 </div>
                 <div className='col-12 col-md-5'>
-                    <img src="/img/cseshop.png"/>
+                    {/* <img src="/img/cseshop.png"/> */}
                 </div>
             </div>
         </div>

@@ -5,8 +5,9 @@ import './button.css'
 const Button = ({
     onClick = f => f,
     children,
+    style,
 }) => {
-    return <button onClick={e=>onClick()}>
+    return <button style={{...style}} onClick={e=>onClick()}>
         <span></span>
         <span></span>
         <span></span>

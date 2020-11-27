@@ -21,22 +21,23 @@
     position: absolute;
     top: 0;
     right: 0;
-    height: 100vh;
-    width: 40vw;
+    height: 100%;
+    width: 45vw;
     max-width: 967px;
     background: #383D59;
     box-shadow: -6px 0px 4px rgba(0, 0, 0, 0.25);
     z-index: 1000;
-    transform: translateX(100%);
-    -webkit-transform: translateX(100%);
-    -moz-transform: translateX(100%);
-    -ms-transform: translateX(100%);
-    -o-transform: translateX(100%);
-    transition: .3s all ease-in;
-    -webkit-transition: .3s all ease-in;
-    -moz-transition: .3s all ease-in;
-    -ms-transition: .3s all ease-in;
-    -o-transition: .3s all ease-in;
+    transform: translateX(110%);
+    -webkit-transform: translateX(110%);
+    -moz-transform: translateX(110%);
+    -ms-transform: translateX(110%);
+    -o-transform: translateX(110%);
+    transition: .3s transform ease-in;
+    -webkit-transition: .3s transform ease-in;
+    -moz-transition: .3s transform ease-in;
+    -ms-transition: .3s transform ease-in;
+    -o-transition: .3s transform ease-in;
+    overflow: hidden;
 }
 
 .sidebar.isOpen{
@@ -52,8 +53,19 @@
     -o-transition: .3s all ease-in;
 }
 
-@media only screen and (max-width:768px){
+.sidebar-content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+@media only screen and (max-width:1200px){
     .sidebar{
-        width: 100%;
+        width: 60vw;
+    }
+}
+@media only screen and (max-width:992px){
+    .sidebar{
+        width: 100vw;
     }
 }

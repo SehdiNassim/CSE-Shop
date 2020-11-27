@@ -1,0 +1,14 @@
+.cart-list {
+    height: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.cart-list::-webkit-scrollbar {
+    display: none;
+}
