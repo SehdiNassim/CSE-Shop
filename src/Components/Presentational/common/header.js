@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { withRouter } from 'react-router'
 import './header.css'
 import ConditionalLink from './conditionalLink';
-import updateHeaderBg from './../../helpers/headerBg';
+import updateHeaderBg from './../../../helpers/headerBg';
 
 
 const Header = ({

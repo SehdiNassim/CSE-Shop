@@ -1,11 +1,11 @@
 import React from 'react'
 import { withRouter } from 'react-router'
-import ConditionalLink from '../conditionalLink'
+import ConditionalLink from '../common/conditionalLink'
 import './sidebar.css'
 import CartItem from './cartItem';
 import CartList from './cartList';
-import Button from '../button';
-import LinkedText from '../linked-text';
+import Button from '../common/button';
+import LinkedText from '../common/linked-text';
 
 
 const SideBar = ({

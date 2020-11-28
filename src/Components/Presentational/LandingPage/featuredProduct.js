@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import Button from './../button';
-import LinkedText from './../linked-text';
-import Counter from './../counter';
+import Button from './../common/button';
+import LinkedText from './../common/linked-text';
+import Counter from './../common/counter';
 
 
 const FeaturedProduct = () => {

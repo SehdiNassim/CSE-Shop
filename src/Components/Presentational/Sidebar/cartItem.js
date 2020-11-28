@@ -1,6 +1,6 @@
 import React from 'react'
 import './cartItem.css'
-import Counter from './../counter';
+import Counter from './../common/counter';
 
 
 const CartItem = ({
