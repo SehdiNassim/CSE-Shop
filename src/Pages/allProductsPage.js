@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 
 const AllProducts=()=>{
-    return <div>
+    return <Fragment>
 
-    </div>
+    </Fragment>
 }
 
 export default AllProducts

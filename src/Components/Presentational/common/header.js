@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { withRouter } from 'react-router'
 import './header.css'
 import ConditionalLink from './conditionalLink';
+import updateHeaderBg from './../../../helpers/headerBg';
 
 
 const Header = ({
@@ -9,6 +10,9 @@ const Header = ({
     location,
     cartLength
 }) => {
+    useEffect(() => {
+       updateHeaderBg()
+    }, [])
     return <header>
         <div className='header-bg'></div>
         <nav className='d-flex flex-row justify-content-between align-items-center'>
@@ -27,7 +31,7 @@ const Header = ({
                     onShopClick()
                 }}>
                     <img src='img/shopping-bag.svg' alt='cart' />
-                    <span className='cart-length' style={{display:cartLength ? '' : 'none'}}>{cartLength}</span>
+                    <span className='cart-length' style={{ display: cartLength ? '' : 'none' }}>{cartLength}</span>
                 </div>
             </div>
         </nav>
