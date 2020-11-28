@@ -14,7 +14,7 @@ const Hero=()=>{
                     </a>
                 </div>
                 <div className='col-12 col-sm-5 align-self-center'>
-                    <img class="img-fluid img-responsive" src="/img/cseshop.png" alt="cse shop"/>
+                    <img className="img-fluid img-responsive" src="/img/cseshop.png" alt="cse shop"/>
                 </div>
             </div>
         </div>
