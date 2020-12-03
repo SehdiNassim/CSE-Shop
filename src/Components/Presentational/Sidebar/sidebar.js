@@ -3,7 +3,6 @@ import { withRouter } from 'react-router'
 import ConditionalLink from '../common/conditionalLink'
 import './sidebar.css'
 import CartItem from './cartItem';
-import CartList from './cartList';
 import Button from '../common/button';
 import LinkedText from '../common/linked-text';
 
@@ -34,12 +33,12 @@ const SideBar = ({
                             <img src='img/close.png' alt='close' onClick={e => onClose()} />
                         </div>
                     </div>
-                    <CartList>
+                    <div className='cart-list'>
                         {
                             cart.map((article, i) => <CartItem key={i} article={article} onDelete={e => onDelete(i)}
                                 setCount={(count) => onSetCount(i, count)}> </CartItem>)
                         }
-                    </CartList>
+                    </div>
                     <div className='row p-3 justify-content-center' style={{ borderTop: '1px solid white' }}>
                         <div className='col-10 d-flex justify-content-between mt-1 mb-2'>
                             <h6>Subtotal</h6>
