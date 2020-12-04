@@ -24,13 +24,13 @@ const SideBar = ({
                             <div className='nav-btn' onClick={e => {
                                 onClose()
                             }}>
-                                <img src='img/shopping-bag.svg' alt='cart' />
+                                <img src='/img/shopping-bag.svg' alt='cart' />
                                 <span className='cart-length' style={{ display: cart.length ? '' : 'none' }}>{cart.length}</span>
                             </div>
                         </ConditionalLink>
                         <h6>Shopping bag</h6>
                         <div className='nav-btn'>
-                            <img src='img/close.png' alt='close' onClick={e => onClose()} />
+                            <img src='/img/close.png' alt='close' onClick={e => onClose()} />
                         </div>
                     </div>
                     <div className='cart-list' style={{flex:"1"}}>
