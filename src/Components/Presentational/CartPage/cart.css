@@ -1,0 +1,16 @@
+.cart-section .cart-products-mobile-list {
+    display: none;
+}
+
+.cart-section .row{
+    margin-left:0 !important;
+    margin-right: 0 !important;
+}
+@media (max-width:992px) {
+    .cart-section>div:nth-child(3) {
+        display: block !important;
+    }
+    .cart-section>div:nth-child(2) {
+        display: none !important;
+    }
+}

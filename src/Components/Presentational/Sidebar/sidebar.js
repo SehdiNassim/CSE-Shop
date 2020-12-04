@@ -33,7 +33,7 @@ const SideBar = ({
                             <img src='img/close.png' alt='close' onClick={e => onClose()} />
                         </div>
                     </div>
-                    <div className='cart-list'>
+                    <div className='cart-list' style={{flex:"1"}}>
                         {
                             cart.map((article, i) => <CartItem key={i} article={article} onDelete={e => onDelete(i)}
                                 setCount={(count) => onSetCount(i, count)}> </CartItem>)
@@ -46,8 +46,8 @@ const SideBar = ({
                                 return previous + current.price * current.count
                             }, 0).toFixed(2) + " DA"}</h6>
                         </div>
-                        <div className='col-auto mt-3 mb-1'>
-                            <p style={{ fontSize: '.8rem' }}>Coupons, taxes and shipping calculated at checkout</p>
+                        <div className='col-10 col-sm-auto mt-3 mb-1'>
+                            <p style={{ fontSize: '.7rem',textAlign: 'center',textAlignLast: "center"}}>Coupons, taxes and shipping calculated at checkout</p>
                         </div>
                         <div className='w-100'></div>
                         <div className='col-10'>
