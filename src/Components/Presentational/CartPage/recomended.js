@@ -1,28 +1,19 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import recproducts from '../../../data/products.json'
-import Product from './../common/Product';
+import ProductsSection from './../common/productsSection';
 
 
 const Recomended = ({
         products=[...recproducts.data],
+        loading=false,
+        getRecomendedProducts=f=>f
 }) => {
-    return <section>
-        <div className='container'>
-            <div className='row justify-content-center'>
-                <div className='col-12 d-flex justify-content-center'>
-                    <p className='title' style={{ textAlign: "center", textAlignLast: "center" }}>Recommended Products</p>
-                </div>
-            </div>
-            <div className='row justify-content-center'>
-                {products.map((product,i) => (
-                    <Product
-                        key={i}
-                        product={product}
-                    />
-                ))}
-            </div>
-        </div>
-    </section>
+
+    useEffect(()=>{
+        getRecomendedProducts()
+    },[getRecomendedProducts])
+
+    return <ProductsSection title='Recomended Products' products={products} loading={loading}></ProductsSection>
 }
 
 export default Recomended
