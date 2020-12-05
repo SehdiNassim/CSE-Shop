@@ -16,12 +16,12 @@ const Footer = () => {
                                 </h3>
                                     <div className="input-group my-5" id="email">
                                         <div className="input-group-prepend">
-                                            <span className="input-group-text" id="inputGroup-sizing-default"><img src="img/communications.svg" alt='.'/></span>
+                                            <span className="input-group-text" id="inputGroup-sizing-default"><img src="/img/communications.svg" alt='.'/></span>
                                         </div>
                                         <input type="text" className="form-control" aria-label="Default" style={{ borderStyle: 'hidden' }}
                                             aria-describedby="inputGroup-sizing-default" placeholder="Enter your email address" />
                                         <div className="input-group-prepend">
-                                            <span className="input-group-text" id="point-to"><img className="bounceRight" src="img/point-to.svg" alt='.'/></span>
+                                            <span className="input-group-text" id="point-to"><img className="bounceRight" src="/img/point-to.svg" alt='.'/></span>
                                         </div>
                                     </div>
                                 </div>
@@ -51,7 +51,7 @@ const Footer = () => {
                     </div>
                     <div className="row mb-4">
                         <div className="col-12">
-                            <p className="footer_made">Made with ❤️ by <img src="img/cse-footer.png" alt='.'></img></p>
+                            <p className="footer_made">Made with ❤️ by <img src="/img/cse-footer.png" alt='.'></img></p>
                         </div>
                     </div>
                     <div className="row p-2 p-md-0 mb-4 links text-left">

@@ -1,0 +1,89 @@
+.sidebar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    z-index: -1000;
+    background: rgba(20, 22, 32, 0);
+    transition-delay: .3s;
+    transition-property: z-index;
+}
+
+.sidebar-container.isOpen {
+    background: rgba(20, 22, 32, 0.52);
+    z-index: 1000;
+    opacity: 1;
+    transition-property: background;
+}
+
+.sidebar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 45vw;
+    max-width: 768px;
+    background: #383D59;
+    box-shadow: -6px 0px 4px rgba(0, 0, 0, 0.25);
+    z-index: 1000;
+    transform: translateX(110%);
+    -webkit-transform: translateX(110%);
+    -moz-transform: translateX(110%);
+    -ms-transform: translateX(110%);
+    -o-transform: translateX(110%);
+    transition: .3s transform ease-in;
+    -webkit-transition: .3s transform ease-in;
+    -moz-transition: .3s transform ease-in;
+    -ms-transition: .3s transform ease-in;
+    -o-transition: .3s transform ease-in;
+    overflow: hidden;
+}
+
+.sidebar.isOpen {
+    transform: translate(0);
+    -webkit-transform: translate(0);
+    -moz-transform: translate(0);
+    -ms-transform: translate(0);
+    -o-transform: translate(0);
+    transition: .3s all ease-in;
+    -webkit-transition: .3s all ease-in;
+    -moz-transition: .3s all ease-in;
+    -ms-transition: .3s all ease-in;
+    -o-transition: .3s all ease-in;
+}
+
+.sidebar-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.cart-list {
+    height: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.cart-list::-webkit-scrollbar {
+    display: none;
+}
+
+@media only screen and (max-width:1200px) {
+    .sidebar {
+        width: 60vw;
+    }
+}
+
+@media only screen and (max-width:992px) {
+    .sidebar {
+        width: 100vw;
+    }
+}

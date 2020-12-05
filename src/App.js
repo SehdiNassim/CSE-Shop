@@ -4,6 +4,7 @@ import AllProducts from './Pages/allProductsPage';
 import LandingPage from './Pages/landingPage';
 import Page from './Pages/pageTemplate';
 import ShoppingBagPage from './Pages/shopBagPage';
+import ProductPage from './Pages/productsPage';
 
 
 const App = () => {
@@ -11,6 +12,7 @@ const App = () => {
     <Page>
       <Switch>
         <Route exact path='/' component={LandingPage}></Route>
+        <Route exact path="/products/:id" component={ProductPage}></Route>
         <Route exact path='/products' component={AllProducts}></Route>
         <Route exact path='/cart' component={ShoppingBagPage}></Route>
         <Route component={() => <Redirect to='/'></Redirect>}></Route>
