@@ -1,0 +1,16 @@
+.icon-box {
+  width: 50px;
+  height: 50px;
+  background: #383d59;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -2px -2px 5px #444b72, 3px 3px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  cursor: pointer;
+  text-align: center;
+}
+.icon-box img {
+  height: 12px;
+  width: 12px;
+}

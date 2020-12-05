@@ -3,7 +3,6 @@ import { withRouter } from 'react-router'
 import ConditionalLink from '../common/conditionalLink'
 import './sidebar.css'
 import CartItem from './cartItem';
-import CartList from './cartList';
 import Button from '../common/button';
 import LinkedText from '../common/linked-text';
 
@@ -25,21 +24,21 @@ const SideBar = ({
                             <div className='nav-btn' onClick={e => {
                                 onClose()
                             }}>
-                                <img src='img/shopping-bag.svg' alt='cart' />
+                                <img src='/img/shopping-bag.svg' alt='cart' />
                                 <span className='cart-length' style={{ display: cart.length ? '' : 'none' }}>{cart.length}</span>
                             </div>
                         </ConditionalLink>
                         <h6>Shopping bag</h6>
                         <div className='nav-btn'>
-                            <img src='img/close.png' alt='close' onClick={e => onClose()} />
+                            <img src='/img/close.png' alt='close' onClick={e => onClose()} />
                         </div>
                     </div>
-                    <CartList>
+                    <div className='cart-list' style={{flex:"1"}}>
                         {
                             cart.map((article, i) => <CartItem key={i} article={article} onDelete={e => onDelete(i)}
                                 setCount={(count) => onSetCount(i, count)}> </CartItem>)
                         }
-                    </CartList>
+                    </div>
                     <div className='row p-3 justify-content-center' style={{ borderTop: '1px solid white' }}>
                         <div className='col-10 d-flex justify-content-between mt-1 mb-2'>
                             <h6>Subtotal</h6>
@@ -47,8 +46,8 @@ const SideBar = ({
                                 return previous + current.price * current.count
                             }, 0).toFixed(2) + " DA"}</h6>
                         </div>
-                        <div className='col-auto mt-3 mb-1'>
-                            <p style={{ fontSize: '.8rem' }}>Coupons, taxes and shipping calculated at checkout</p>
+                        <div className='col-10 col-sm-auto mt-3 mb-1'>
+                            <p style={{ fontSize: '.7rem',textAlign: 'center',textAlignLast: "center"}}>Coupons, taxes and shipping calculated at checkout</p>
                         </div>
                         <div className='w-100'></div>
                         <div className='col-10'>

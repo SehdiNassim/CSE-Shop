@@ -6,14 +6,19 @@ const Button = ({
     onClick = f => f,
     children,
     style,
+    type = 'primary'
 }) => {
-    return <button style={{...style}} onClick={e=>onClick()}>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+    type= ['primary', 'secondary'].includes(type) ? type : 'primary'
+    return <button className={type+'-button'} style={{ ...style }} onClick={e => onClick()}>
+        {
+            type === 'primary' && (<>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span></>)
+        }
         {children}
-</button>
+    </button>
 }
 
 export default Button
