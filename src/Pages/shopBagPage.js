@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { Fragment } from 'react'
+import Cart from './../Components/Container/Cart';
+import Recomended from './../Components/Presentational/CartPage/recomended';
 
 
 const ShoppingBagPage=()=>{
-    return <div>
-
-    </div>
+    return <Fragment>
+        <Cart/>
+        <Recomended/>
+    </Fragment>
 }
 
 export default ShoppingBagPage

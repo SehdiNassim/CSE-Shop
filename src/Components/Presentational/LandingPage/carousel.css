@@ -17,7 +17,8 @@
 
 .switch-arrow-right {
     transform: rotate(180deg);
-}
+    left: 48px;
+    }
 
 .img-container {
     border: 16px solid #ffffff;
