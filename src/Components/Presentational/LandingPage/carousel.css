@@ -1,0 +1,38 @@
+.carousel {
+
+}
+
+.switch-button {
+    width: 80px;
+    height: 80px;
+}
+
+.switch-arrow {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 30px;
+    left: 41px;
+}
+
+.switch-arrow-right {
+    transform: rotate(180deg);
+    left: 48px;
+    }
+
+.img-container {
+    border: 16px solid #ffffff;
+    width: 100%;
+}
+
+@media screen and (max-width: 400px) {
+    .img-container {
+        border: 2px solid #ffffff;
+
+    }
+    .slider-container {
+        padding: 0 !important;
+    }
+}
+
+
