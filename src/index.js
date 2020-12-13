@@ -9,6 +9,7 @@ import setCart from './Store/action creators/cart/setCart';
 const store = CseShopStore()
 store.dispatch(setCart([
   {
+    id:'sdvkjfbvv',
     title:"CSE shirt sweat all sizes lorem ipsum ...",
     category:"Cse Shirt / Sweat",
     src:"/img/sweat.png",
@@ -16,6 +17,7 @@ store.dispatch(setCart([
     count:1,
   },
   {
+    id:'sdvkjfbvsdljbdvjb',
     title:"CSE Full Set - Tshirt , Bag, cap - 2020",
     category:"CSE Look",
     src:"/img/image 2.png",
@@ -23,6 +25,7 @@ store.dispatch(setCart([
     count:1,
   },
   {
+    id:'sdvkjfbvsdljbdvjbsfvjbfvkj:b',
     title:"CSE shirt",
     category:"Cse Shirt / Sweat",
     src:"/img/sweat.png",
@@ -30,6 +33,7 @@ store.dispatch(setCart([
     count:1,
   },
   {
+    id:'sdvkjfbvsdljbdvjbsfvjbfvkj:b11',
     title:"CSE Full Set",
     category:"CSE Look",
     src:"/img/image 2.png",

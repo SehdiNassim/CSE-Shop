@@ -1,15 +1,24 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './detailedProduct.css'
 import Button from './../common/button';
 import LinkedText from './../common/linked-text';
+import { withRouter } from 'react-router';
+import qs from 'query-string'
 
 const DetailedProduct = ({
     product,
     match,
+    location,
     loading = false,
     getProduct = f => f,
     addToCart = f => f,
 }) => {
+
+    useEffect(()=>{
+        window.scrollTo(0,0)
+        console.log(qs.parse(location.search))
+        console.log(location)
+    },[location])
     const colors = ["white", "#4B9DC1", "#232637"]
     const sizes = ["Small", "Medium", "Large", "X-Large"]
     const images = ["/img/sweat.png", "/img/image 2.png", "/img/sweat.png", "/img/image 2.png"]
@@ -81,4 +90,4 @@ const DetailedProduct = ({
     </section>
 }
 
-export default DetailedProduct
+export default withRouter(DetailedProduct)
