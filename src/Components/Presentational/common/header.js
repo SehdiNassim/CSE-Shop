@@ -20,7 +20,7 @@ const Header = ({
                 <img className='cse-logo' src={'/img/cse-footer.png'} alt='cse-logo' />
             </ConditionalLink>
             <ConditionalLink to='/' condition={location.pathname !== '/'} className='cse-logo-mobile'>
-                <img className='cse-logo-mobile' src='/img/Logo without signature.png' alt='cse-logo' />
+                <img className='cse-logo-mobile' src='/img/Logo Without Signature.png' alt='cse-logo' />
             </ConditionalLink>
             <div className='nav-btn'>
                 <div className='burger'></div>
@@ -28,7 +28,7 @@ const Header = ({
             <div className='d-flex'>
                 <ConditionalLink to='/products' condition={location.pathname !== '/products'}>
                     <div className='nav-btn category-logo'>
-                        <img src='/img/category.svg' alt='category' />
+                        <img src='/img/Category.svg' alt='category' />
                     </div>
                 </ConditionalLink>
                 <div className='nav-btn' onClick={e => {
