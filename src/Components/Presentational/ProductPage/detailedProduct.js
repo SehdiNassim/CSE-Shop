@@ -39,7 +39,7 @@ const DetailedProduct = ({
                             {images.map((s,i) => {
                                 return <div className={`mini-imgs-container my-2 my-sm-0 mx-2 ${i === imgIndex ? 'is-selected' : ''}`}>
                                     <div style={{border:".5px solid white",borderRadius:'50%',padding:"12px",cursor:'pointer'}} onClick={e=>setImgIndex(i)}>
-                                        <img src={s} style={{ width: "50px", height: '50px'}} />
+                                        <img src={s} style={{ width: "50px", height: '50px'}} alt='product'/>
                                     </div>
                                 </div>
                             })}
