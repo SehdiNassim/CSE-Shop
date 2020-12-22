@@ -11,7 +11,19 @@
     -ms-transition: .3s all ease;
     -o-transition: .3s all ease;
 }
-.product-img:hover ~ div>.product-price{
+.product-img{
+    width: 100%;
+}
+.product-img img{
+    max-width: 100%;
+}
+.product-title{
+    font-size: .7rem;
+}
+.product-price{
+    font-size: .9rem;
+}
+.product-img:hover ~ .product-price{
     opacity: 1;
     transform: translateY(-8px);
     -webkit-transform: translateY(-8px);

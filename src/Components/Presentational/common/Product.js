@@ -9,20 +9,14 @@ const Product = ({
     location
 }) => {
     return (
-        <div className="col-12 col-lg-4 row justify-content-center text-center">
-            <Link to={`/products/${product.id}?type=product`} className={`col-12 ${styles['product-img']}`}
-                condition={location.pathname !== `/products/${product.id}`}>
-                <img src={product.src} alt="product" className="" />
+        <div className="col-12 col-lg-4 d-flex flex-column justify-content-center text-center">
+            <Link to={`/products/${product.id}?type=product`} className={`${styles['product-img']}`}>
+                <img src={product.src} alt="product"/>
             </Link>
-            <div className="col-12">
-                <ConditionalLink to={`/products/${product.id}?type=product`}
-                    condition={location.pathname !== `/products/${product.id}`}>
-                    <p className='hover-underline'>{product.title}</p>
-                </ConditionalLink>
-            </div>
-            <div className="col-12">
+                <Link to={`/products/${product.id}?type=product`}>
+                    <p className={styles['product-title']}>{product.title}</p>
+                </Link>
                 <p className={styles['product-price']}>{product.price}</p>
-            </div>
         </div>
     )
 }
