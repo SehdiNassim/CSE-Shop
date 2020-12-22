@@ -13,9 +13,9 @@ const FeaturedProduct = () => {
             <div className='row justify-content-center mb-4'>
                 <p className='col-auto title'> Our featured product.</p>
             </div>
-            <div className='row justify-content-center'>
+            <div className='row justify-content-center align-items-center'>
                 <div className='col-10 col-lg-6 d-flex justify-content-center'>
-                    <img src='img/image 2.png' alt='featured-product' style={{ maxHeight: '100%', maxWidth: '100%' }} />
+                    <img src='img/image 2.png' alt='featured-product' style={{width:"100%", maxHeight: '100%', maxWidth: '100%' }} />
                 </div>
                 <div className='col-10 col-lg-6 d-flex flex-column justify-content-start'>
                     <p style={{ margin: '0' }}>CSE Look</p>
