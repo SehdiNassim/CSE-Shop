@@ -37,7 +37,7 @@ const DetailedProduct = ({
                         <img className='product-img' src={images[imgIndex]} alt='product img' />
                         <div className='d-flex w-100 justify-content-center px-2 px-sm-0 flex-wrap mt-2 mt-sm-4'>
                             {images.map((s,i) => {
-                                return <div className={`mini-imgs-container my-2 my-sm-0 mx-2 ${i === imgIndex ? 'is-selected' : ''}`}>
+                                return <div className={`mini-imgs-container my-2 my-sm-0 mx-2 ${i === imgIndex ? 'is-selected' : ''}`} key={i}>
                                     <div style={{border:".5px solid white",borderRadius:'50%',padding:"12px",cursor:'pointer'}} onClick={e=>setImgIndex(i)}>
                                         <img src={s} style={{ width: "50px", height: '50px'}} alt='product'/>
                                     </div>
@@ -57,8 +57,8 @@ const DetailedProduct = ({
                             <h5 className=''>Size:</h5>
                             <div className='d-flex ml-0 ml-sm-5 flex-wrap'>
                                 {
-                                    sizes.map(s => {
-                                        return <p className={'product-size m-2' + (s === size ? ' is-selected' : '')}
+                                    sizes.map((s,i) => {
+                                        return <p key={i} className={'product-size m-2' + (s === size ? ' is-selected' : '')}
                                             onClick={e => setSize(s)}>
                                             {s}</p>
                                     })
@@ -70,7 +70,7 @@ const DetailedProduct = ({
                             <div className='d-flex ml-0 ml-sm-5 flex-wrap'>
                                 {
                                     colors.map((clr, index) => {
-                                        return <span className={'product-color m-2' + (color === clr ? ' is-selected ' : '')}
+                                        return <span key={index} className={'product-color m-2' + (color === clr ? ' is-selected ' : '')}
                                             onClick={e => setColor(clr)}>
                                             <div style={{ backgroundColor: clr }}></div>
                                         </span>

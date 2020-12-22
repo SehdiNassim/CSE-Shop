@@ -1,12 +1,10 @@
 import React from 'react'
 import { withRouter, Link } from 'react-router-dom';
-import ConditionalLink from './conditionalLink';
 import styles from './product.module.css'
 
 
 const Product = ({
     product,
-    location
 }) => {
     return (
         <div className="col-12 col-lg-4 d-flex flex-column justify-content-center text-center">
