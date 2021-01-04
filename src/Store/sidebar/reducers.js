@@ -1,4 +1,4 @@
-import constants from './../constants';
+import constants from './actions';
 
 const sidebar= (state={
     isOpen:false

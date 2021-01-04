@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import Crt from '../Presentational/CartPage/cart';
-import removeProduct from './../../Store/action creators/cart/removeProduct';
-import setProductCount from './../../Store/action creators/cart/setProductCount';
+import setProductCount from './../../Store/cart/action creators/setProductCount';
+import removeProduct from './../../Store/cart/action creators/removeProduct';
 
 const mapStateToProps = (state) => ({
     cart: state.cart

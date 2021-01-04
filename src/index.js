@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
-import CseShopStore from './Store/store';
+import CseShopStore from './Store/index';
 import App from './App';
-import setCart from './Store/action creators/cart/setCart';
+import setCart from './Store/cart/action creators/setCart';
 
-const store = CseShopStore()
+const store = CseShopStore
 store.dispatch(setCart([
   {
     id:'sdvkjfbvv',

@@ -1,9 +1,9 @@
-import c from '../../constants'
+import c from '../actions'
 
 
 const setCart=(cart=[])=>{
     return {
-        type: c.SET_CART,
+        type: c.SET_STATE,
         cart
     }
 } 
