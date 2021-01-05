@@ -4,7 +4,7 @@ import Footer from './../Components/Presentational/common/footer';
 import SideBar from './../Components/Container/Sidebar';
 
 
-const Page=({
+const Layout=({
     children,
 })=>{
     return <Fragment>
@@ -15,4 +15,4 @@ const Page=({
     </Fragment>
 }
 
-export default Page
+export default Layout

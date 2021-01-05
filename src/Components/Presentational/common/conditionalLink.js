@@ -6,15 +6,17 @@ const ConditionalLink = ({
     to = '',
     condition = true,
     children,
+    style,
+    className,
 }) => {
     return condition ?
-        <Link to={to}>
+        <Link className={className} style={{...style}} to={to}>
             {children}
         </Link>
         :
-        <div>
+        <>
             {children}
-        </div>
+        </>
 }
 
 export default ConditionalLink

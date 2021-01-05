@@ -1,6 +1,5 @@
 import { connect } from 'react-redux'
 import Hdr from './../Presentational/common/header';
-import openSidebar from './../../Store/action creators/sidebar/openSidebar';
 
 const mapStateToProps=(state)=>({
     cartLength:state.cart.length
@@ -8,7 +7,9 @@ const mapStateToProps=(state)=>({
 
 const mapDispatchToProps = (dispatch) => ({
     onShopClick() {
-        dispatch(openSidebar())
+        dispatch({
+            type:'OPEN_SIDEBAR'
+        })
     }
 })
 

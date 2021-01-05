@@ -2,13 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
-import CseShopStore from './Store/store';
+import CseShopStore from './Store/index';
 import App from './App';
-import setCart from './Store/action creators/cart/setCart';
+import setCart from './Store/cart/action creators/setCart';
 
-const store = CseShopStore()
+const store = CseShopStore
 store.dispatch(setCart([
   {
+    id:'sdvkjfbvv',
     title:"CSE shirt sweat all sizes lorem ipsum ...",
     category:"Cse Shirt / Sweat",
     src:"/img/sweat.png",
@@ -16,6 +17,7 @@ store.dispatch(setCart([
     count:1,
   },
   {
+    id:'sdvkjfbvsdljbdvjb',
     title:"CSE Full Set - Tshirt , Bag, cap - 2020",
     category:"CSE Look",
     src:"/img/image 2.png",
@@ -23,6 +25,7 @@ store.dispatch(setCart([
     count:1,
   },
   {
+    id:'sdvkjfbvsdljbdvjbsfvjbfvkj:b',
     title:"CSE shirt",
     category:"Cse Shirt / Sweat",
     src:"/img/sweat.png",
@@ -30,6 +33,7 @@ store.dispatch(setCart([
     count:1,
   },
   {
+    id:'sdvkjfbvsdljbdvjbsfvjbfvkj:b11',
     title:"CSE Full Set",
     category:"CSE Look",
     src:"/img/image 2.png",

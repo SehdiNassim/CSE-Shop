@@ -36,7 +36,7 @@ const SideBar = ({
                     <div className='cart-list' style={{flex:"1"}}>
                         {
                             cart.map((article, i) => <CartItem key={i} article={article} onDelete={e => onDelete(i)}
-                                setCount={(count) => onSetCount(i, count)}> </CartItem>)
+                                setCount={(count) => onSetCount(i, count)} onLinkClick={e=>onClose()}> </CartItem>)
                         }
                     </div>
                     <div className='row p-3 justify-content-center' style={{ borderTop: '1px solid white' }}>

@@ -3,17 +3,20 @@
         {
             "id": 1,
             "src": "/img/sweat.png",
-            "title": "CSE Sweat shirt - All sizes -"
+            "title": "CSE Sweat shirt - All sizes -",
+            "price":"5000,00DA"
         },
         {
             "id": 2,
             "src": "/img/sweat.png",
-            "title": "CSE Sweat shirt - All sizes -"
+            "title": "CSE Sweat shirt - All sizes -",
+            "price":"5000,00DA"
         },
         {
             "id": 3,
             "src": "/img/sweat.png",
-            "title": "CSE Sweat shirt - All sizes -"
+            "title": "CSE Sweat shirt - All sizes -",
+            "price":"5000,00DA"
         }
     ]
 }

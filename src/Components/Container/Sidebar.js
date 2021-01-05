@@ -1,8 +1,7 @@
 import { connect } from 'react-redux'
 import Sbar from '../Presentational/Sidebar/sidebar';
-import closeSidebar from './../../Store/action creators/sidebar/closeSidebar';
-import removeProduct from './../../Store/action creators/cart/removeProduct';
-import setProductCount from './../../Store/action creators/cart/setProductCount';
+import removeProduct from './../../Store/cart/action creators/removeProduct';
+import setProductCount from './../../Store/cart/action creators/setProductCount';
 
 const mapStateToProps = (state) => ({
     isOpen: state.sidebar.isOpen,
@@ -11,7 +10,9 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
     onClose: () => {
-        dispatch(closeSidebar())
+        dispatch({
+            type:'CLOSE_SIDEBAR'
+        })
     },
     onDelete: (index) => {
         dispatch(removeProduct(index))

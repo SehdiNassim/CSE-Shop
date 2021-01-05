@@ -1,0 +1,95 @@
+.item {
+    width: 100%;
+    padding: 12px 24px 0;
+    border-top: 1px solid white;
+}
+.item .header i{
+    transition: .1s all ease-in;
+    -webkit-transition: .1s all ease-in;
+    -moz-transition: .1s all ease-in;
+    -ms-transition: .1s all ease-in;
+    -o-transition: .1s all ease-in;
+}
+.item.is-open .header i{
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
+.header {
+    width: 100%;
+    cursor: pointer;
+    margin-bottom: 12px;
+}
+
+.title {
+    font-family: "GilroyExtraBold";
+    margin: 0;
+}
+
+.item input[type='checkbox'] {
+    display: none;
+}
+
+.custom-checkbox {
+    position: relative;
+    height: 16px;
+    width: 16px;
+    background-color: rgba(255, 255, 255, 0);
+    border: .5px solid white;
+    transition: .3s all ease;
+    -webkit-transition: .3s all ease;
+    -moz-transition: .3s all ease;
+    -ms-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    margin-right: 8px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    cursor: pointer;
+}
+
+.custom-checkbox i {
+    position: absolute;
+    font-size: 10px;
+    opacity: 0;
+    color: #383d59;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.item input[type='checkbox']:checked~.custom-checkbox {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.item input[type='checkbox']:checked~.custom-checkbox i {
+    opacity: 1;
+}
+
+.custom-checkbox-label {
+    font-family: 'GilroyLight';
+    font-size: .8rem;
+    cursor: pointer;
+}
+
+.item input[type='checkbox']:checked~.custom-checkbox-label {
+    font-family: "GilroyExtraBold";
+}
+
+.body {
+    transition: .3s all linear;
+    -ms-transition: .3s all linear;
+    -webkit-transition: .3s all linear;
+    -moz-transition: .3s all linear;
+    -o-transition: .3s all linear;
+    overflow: hidden;
+}
