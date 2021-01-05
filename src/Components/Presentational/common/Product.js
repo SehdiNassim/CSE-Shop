@@ -8,13 +8,13 @@ const Product = ({
 }) => {
     return (
         <div className="col-12 col-lg-4 d-flex flex-column justify-content-center text-center">
-            <Link to={`/products/${product.id}?type=product`} className={`${styles['product-img']}`}>
-                <img src={product.src} alt="product"/>
+            <Link to={`/products/${product.id}?type=${product.itemName ? "item":"bundle"}`} className={`${styles['product-img']}`}>
+                <img src={product.image} alt="product"/>
             </Link>
                 <Link to={`/products/${product.id}?type=product`}>
-                    <p className={styles['product-title']}>{product.title}</p>
+                    <p className={styles['product-title']}>{product.itemName || product.bundleName}</p>
                 </Link>
-                <p className={styles['product-price']}>{product.price}</p>
+                <p className={styles['product-price']}>{(product.price || product.items.reduce((a,b)=> a+b.price, 0)).toFixed(2)+"DA"}</p>
         </div>
     )
 }

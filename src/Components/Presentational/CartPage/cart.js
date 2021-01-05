@@ -29,18 +29,18 @@ const Cart = ({
                     <div className='col-2 offset-1'>Total</div>
                 </div>
                 {
-                    cart.map((article, i) => <CartItem
+                    cart.map((product, i) => <CartItem
                         key={i}
-                        article={article}
+                        product={product}
                         onDelete={e => onDelete(i)}
                         setCount={(count) => onSetCount(i, count)}> </CartItem>)
                 }
             </div>
             <div className='container-fluid cart-products-mobile-list p-0'>
                 {
-                    cart.map((article, i) => <MobileCartItem
+                    cart.map((product, i) => <MobileCartItem
                         key={i}
-                        article={article}
+                        product={product}
                         onDelete={e => onDelete(i)}
                         setCount={(count) => onSetCount(i, count)}> </MobileCartItem>)
                 }

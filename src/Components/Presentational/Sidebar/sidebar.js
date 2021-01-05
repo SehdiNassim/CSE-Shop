@@ -35,7 +35,7 @@ const SideBar = ({
                     </div>
                     <div className='cart-list' style={{flex:"1"}}>
                         {
-                            cart.map((article, i) => <CartItem key={i} article={article} onDelete={e => onDelete(i)}
+                            cart.map((product, i) => <CartItem key={i} product={product} onDelete={e => onDelete(i)}
                                 setCount={(count) => onSetCount(i, count)} onLinkClick={e=>onClose()}> </CartItem>)
                         }
                     </div>

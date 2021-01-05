@@ -2,21 +2,21 @@
     "data":[
         {
             "id": 1,
-            "src": "/img/sweat.png",
-            "title": "CSE Sweat shirt - All sizes -",
-            "price":"5000,00DA"
+            "image": "/img/sweat.png",
+            "itemName": "CSE Sweat shirt - All sizes -",
+            "price":5000
         },
         {
             "id": 2,
-            "src": "/img/sweat.png",
-            "title": "CSE Sweat shirt - All sizes -",
-            "price":"5000,00DA"
+            "image": "/img/sweat.png",
+            "itemName": "CSE Sweat shirt - All sizes -",
+            "price":5000
         },
         {
             "id": 3,
-            "src": "/img/sweat.png",
-            "title": "CSE Sweat shirt - All sizes -",
-            "price":"5000,00DA"
+            "image": "/img/sweat.png",
+            "itemName": "CSE Sweat shirt - All sizes -",
+            "price":5000
         }
     ]
 }
