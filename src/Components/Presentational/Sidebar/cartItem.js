@@ -34,7 +34,7 @@ const CartItem = ({
                 </div>
             </div>
             <div className='d-flex flex-row justify-content-between'>
-                <p className='cart-item-price'>{(product.price * product.count).toFixed(2) + " DA"}</p>
+                <p className='cart-item-price'>{((product.price || product.items.reduce((a,b)=> a+b.price, 0)) * product.count).toFixed(2) + " DA"}</p>
                 <p className='remove-item' onClick={onDelete}>Remove item</p>
             </div>
         </div>

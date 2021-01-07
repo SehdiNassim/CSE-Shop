@@ -1,5 +1,5 @@
-export default {
-    SET_STATE:'crud/SET_STATE',
+const actions = {
+    SET_STATE: 'crud/SET_STATE',
     GET_ALL_PRODUCTS: 'crud/GET_ALL_PRODUCTS',
     GET_BUNDLES: 'crud/GET_BUNDLES',
     GET_ITEMS: 'crud/GET_ITEMS',
@@ -8,3 +8,5 @@ export default {
     GET_LATEST_PRODUCTS: 'crud/GET_LATEST_PRODUCTS',
     GET_FEATURED_PRODUCT: 'crud/GET_FEATURED_PRODUCT',
 }
+
+export default actions

@@ -24,7 +24,7 @@ const CartItem = ({
             <Counter inCartItem count={product.count} setCount={setCount} />
         </div>
         <div className='col-2 offset-1 d-flex'>
-            <p className='m-0' >{(product.price * product.count).toFixed(2) + " DA"}</p>
+            <p className='m-0' >{((product.price || product.items.reduce((a,b)=> a+b.price, 0)) * product.count).toFixed(2) + " DA"}</p>
         </div>
         <div className='col-1 d-flex justify-content-center'>
             <div className="icon-box" onClick={onDelete}>

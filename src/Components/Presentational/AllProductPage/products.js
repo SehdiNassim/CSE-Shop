@@ -1,11 +1,10 @@
-import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import recproducts from '../../../data/products.json'
 import filterItemAnimation from '../../../helpers/accordion';
 import Product from '../common/Product';
 import FilterCategory from './filterCategory';
 import styles from './products.module.css'
 import { connect } from 'react-redux';
+import Loader from './../common/loader';
 
 
 
@@ -29,7 +28,7 @@ const Products = ({
                     {filtres.map(flt => <p className={styles.haya} key={flt}>{flt}</p>)}
                 </div>
                 {
-                    !loading && <>
+                    loading ? <Loader/> : <>
                         <div className="col-4 d-none d-lg-block">
                             <div style={{ position: 'sticky', top: '100px' }}>
                                 <FilterCategory type='Item Type' choices={categories} onChange={toggleFiltre} />
