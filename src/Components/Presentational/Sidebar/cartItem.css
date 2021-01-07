@@ -7,8 +7,19 @@
     padding:16px 0 0 20px
     
 }
-.cart-item-img {
+.cart-item-img-container{
+    height: 150px;
     width: 150px;
+    display: flex;
+    justify-content:center;
+}
+.cart-item-img-container a{
+    display: flex;
+    justify-content:center;
+}
+.cart-item-img-container  .cart-item-img {
+    max-width: 100%;
+    max-height: 100%;
     cursor: pointer;
 }
 
@@ -46,8 +57,9 @@
         padding-left:8px;
         padding-right: 12px;
     }
-    .cart-item-img {
+    .cart-item-img-container {
         width: 100px;
+        height:100px
     }
     .cart-item-title {
         text-overflow: ellipsis;

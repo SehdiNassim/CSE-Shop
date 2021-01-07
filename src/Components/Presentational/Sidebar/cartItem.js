@@ -14,14 +14,16 @@ const CartItem = ({
     style,
 }) => {
     return <div className='cart-item d-flex flex-row align-items-center' style={{ ...style }}>
-        <ConditionalLink to={`/products/${product.id}?type=${product.itemName ? "item":"bundle"}`}
-            condition={location.pathname !== `/products/${product.id}`}>
-            <img src={product.image} alt='product-img' className='cart-item-img' onClick={onLinkClick} />
-        </ConditionalLink>
+        <div className='cart-item-img-container'>
+            <ConditionalLink to={`/products/${product.id}?type=${product.itemName ? "item" : "bundle"}`}
+                condition={location.pathname !== `/products/${product.id}`}>
+                <img src={product.image} alt='product-img' className='cart-item-img' onClick={onLinkClick} />
+            </ConditionalLink>
+        </div>
         <div className='cart-item-content d-flex flex-column'>
             <div className='d-flex flex-row justify-content-between'>
                 <div style={{ flex: 1 }}>
-                    <ConditionalLink to={`/products/${product.id}?type=${product.itemName ? "item":"bundle"}`}
+                    <ConditionalLink to={`/products/${product.id}?type=${product.itemName ? "item" : "bundle"}`}
                         condition={location.pathname !== `/products/${product.id}`}>
                         <h6 className='cart-item-title' onClick={onLinkClick}>{product.itemName || product.bundleName}</h6>
                     </ConditionalLink>
