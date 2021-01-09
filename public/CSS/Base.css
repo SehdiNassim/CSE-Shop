@@ -98,6 +98,14 @@ a{
     text-decoration: none !important;
 }
 
+.no-scrollbar{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
 @media only screen and (max-width:768px){
     .title{
         font-size: 2rem;

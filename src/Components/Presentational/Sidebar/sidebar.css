@@ -6,9 +6,10 @@
     width: 100%;
     overflow-x: hidden;
     z-index: -1000;
+    opacity: 0;
     background: rgba(20, 22, 32, 0);
     transition-delay: .3s;
-    transition-property: z-index;
+    transition-property: z-index,opacity;
 }
 
 .sidebar-container.isOpen {

@@ -3,6 +3,7 @@ import './cart.css'
 import CartItem from './../CartPage/cartItem';
 import MobileCartItem from './../Sidebar/cartItem';
 import Button from './../common/button';
+import { Link } from 'react-router-dom';
 
 
 const Cart = ({
@@ -18,7 +19,7 @@ const Cart = ({
                         style={{
                             textAlign: "center",
                             textAlignLast: "center",
-                            marginBottom:'50px'
+                            marginBottom: '50px'
                         }}>Shopping Bag</p>
                 </div>
             </div>
@@ -29,18 +30,18 @@ const Cart = ({
                     <div className='col-2 offset-1'>Total</div>
                 </div>
                 {
-                    cart.map((article, i) => <CartItem
+                    cart.map((product, i) => <CartItem
                         key={i}
-                        article={article}
+                        product={product}
                         onDelete={e => onDelete(i)}
                         setCount={(count) => onSetCount(i, count)}> </CartItem>)
                 }
             </div>
             <div className='container-fluid cart-products-mobile-list p-0'>
                 {
-                    cart.map((article, i) => <MobileCartItem
+                    cart.map((product, i) => <MobileCartItem
                         key={i}
-                        article={article}
+                        product={product}
                         onDelete={e => onDelete(i)}
                         setCount={(count) => onSetCount(i, count)}> </MobileCartItem>)
                 }
@@ -48,16 +49,18 @@ const Cart = ({
             <div className="container px-0 px-md-5">
                 <div className='row justify-content-center justify-content-sm-between align-items-end mt-3'>
                     <div className='col-10 col-sm-4 p-0'>
-                        <Button style={{ width: '100%' }} type='secondary'>Continue SHOPPINg</Button>
+                        <Link to='/products'>
+                            <Button style={{ width: '100%' }} type='secondary'>Continue SHOPPINg</Button>
+                        </Link>
                     </div>
                     <div className='col-10 col-sm-4 d-flex flex-column align-items-center align-items-sm-end mt-5 m-0 p-0'>
                         <div className='d-flex justify-content-between mb-3' style={{ width: '80%' }}>
-                            <h6 style={{fontFamily:'GilroyLight'}}>Subtotal</h6>
-                            <h6 style={{fontFamily:'GilroyExtraBold'}}>{cart.reduce((previous, current) => {
-                                return previous + current.price * current.count
+                            <h6 style={{ fontFamily: 'GilroyLight' }}>Subtotal</h6>
+                            <h6 style={{ fontFamily: 'GilroyExtraBold' }}>{cart.reduce((previous, current) => {
+                                return previous + (current.price || current.items.reduce((a, b) => a + b.price, 0)) * current.count
                             }, 0).toFixed(2) + " DA"}</h6>
                         </div>
-                        <p style={{fontSize:'.7rem'}}>Coupons, taxes and shipping calculated at checkout</p>
+                        <p style={{ fontSize: '.7rem' }}>Coupons, taxes and shipping calculated at checkout</p>
                         <Button style={{ width: '100%' }}>Checkout</Button>
                     </div>
                 </div>
