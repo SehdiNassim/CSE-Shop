@@ -14,15 +14,15 @@ const DetailedProduct = ({
     crud,
     match,
     location,
+    history,
     getProduct = f => f,
     addToCart = f => f,
 }) => {
 
     useEffect(() => {
         const type = qs.parse(location.search).type
-        console.log(type)
-        getProduct({ id: match.params.id, type: type })
-    }, [location,match,getProduct])
+        getProduct({ id: match.params.id, type: type, onError:()=> history.push('/products') })
+    }, [location,match,history,getProduct])
 
     const { product, loading } = crud
     const colors = ["white", "#4B9DC1", "#232637"]

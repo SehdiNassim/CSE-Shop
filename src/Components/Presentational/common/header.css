@@ -42,6 +42,7 @@ header .cse-logo-mobile {
 
 .nav-btn {
     position: relative;
+    display: flex;
     height: 24px;
     width: 24px;
     margin: 0 12px;

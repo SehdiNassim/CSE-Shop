@@ -79,7 +79,7 @@ export function* GET_BUNDLES(){
     }
 }
 export function* GET_PRODUCT({payload}){
-    const {id, type}=payload
+    const {id, type, onError}=payload
     yield put({
         type: actions.SET_STATE,
         payload: {
@@ -91,18 +91,18 @@ export function* GET_PRODUCT({payload}){
         yield put({
             type: actions.SET_STATE,
             payload: {
-                loading: false,
                 product:{...product.data}
             }
         })
     } catch (e) {
-        yield put({
-            type: actions.SET_STATE,
-            payload: {
-                loading: false,
-            }
-        })
+        if (onError) yield call(onError)
     }
+    yield put({
+        type: actions.SET_STATE,
+        payload: {
+            loading: false,
+        }
+    })
 }
 
 export default function* crudSaga() {
