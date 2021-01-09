@@ -4,10 +4,10 @@ import './linked-text.css'
 
 const LinkedText=({
     children,
-    onCLick=f=>f,
+    onClick=f=>f,
     style={}
 })=>{
-    return <p className='linked-text' style={{...style}} onClick={e=>onCLick()}>
+    return <p className='linked-text' style={{...style}} onClick={e=>onClick()}>
         {children}
     </p>
 }

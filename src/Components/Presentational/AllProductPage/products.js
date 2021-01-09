@@ -4,6 +4,8 @@ import FilterCategory from './filterCategory';
 import styles from './products.module.css'
 import { connect } from 'react-redux';
 import Loader from './../common/loader';
+import Button from './../common/button';
+import LinkedText from './../common/linked-text';
 
 
 
@@ -25,8 +27,14 @@ const Products = ({
                             <img src='/img/close.png' alt='close' onClick={e => setOpenFilter(false)} />
                         </div>
                     </div>
-                    <div className='no-scrollbar' style={{ flex: 1, overflowY:"scroll" }}>
+                    <div className='no-scrollbar' style={{ flex: 1, overflowY: "scroll" }}>
                         <FilterCategory type='Item Type' choices={categories} selectedChoices={filtres} onChange={toggleFiltre} />
+                    </div>
+                    <div className='d-flex flex-column justify-content-center align-items-center my-4' style={{ width: "100%" }}>
+                        <div style={{ width: "80%", margin:"24px 0" }}>
+                            <Button style={{ width: '100%' }} onClick={e => setOpenFilter(false)}>APPLY</Button>
+                        </div>
+                        <LinkedText onClick={e => setFiltres([])}>Clear All</LinkedText>
                     </div>
                 </div>
             </div>}
