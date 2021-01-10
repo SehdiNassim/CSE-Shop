@@ -76,7 +76,7 @@ button:focus {
 }
 
 .secondary-button{
-  background-color: #383D59;
+  background-color: transparent;
   border: 3px solid white;
 }
 

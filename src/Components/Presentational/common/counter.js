@@ -18,7 +18,7 @@ const Counter = ({
         <input type="number" className='counter-input' min="1" value={count}
             onChange={e => {
                 e.preventDefault()
-                var value = e.target.value
+                var value = parseInt(e.target.value)
                 if (value > 0) {
                     setCount(value)
                 }
